@@ -1,0 +1,20 @@
+[
+    {
+        "title":"Escuadra",
+        "price":125.45,
+        "thumbNail":"www.prueba.com.ar/asda",
+        "id":0
+    },
+    {
+        "title":"Calculadora",
+        "price":255.56,
+        "thumbNail":"www.prueba.com.ar/asda",
+        "id":1
+    },
+    {
+        "title":"Escuadra",
+        "price":341.87,
+        "thumbNail":"www.prueba.com.ar/asda",
+        "id":2
+    }
+]
