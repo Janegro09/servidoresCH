@@ -1,33 +1,22 @@
 const express = require('express');
 const app     = express();
 const port = 8080;
-
-const frase   = 'Hola mundo como están';
+const Contenedor = require('./main');
+const nuevoProducto = new Contenedor("productos.txt");
 
 
 app.get('/productos', function (req, res) {
-  
-    res.send({frase})
-  
+    let c = nuevoProducto.getAll();
+    res.send(d)
 })
 
 app.get('/productosRandom', function (req, res) {
-  
-  const id = parseInt(req.params.id);
+  const todos = nuevoProducto.getAll();
+  const largo = todos.length
+  const id = Math.floor(Math.random() * (largo + 1))
 
-  if(isNaN(id)){
-    res.send({error: "parametro invalido"})      
-  }
+  res.send(todos[id])      
 
-  if(id) {
-    if (id < 0 || id > frase.length) {
-      res.send({error: "parametro invalido"})      
-    } else {
-      res.send(frase[id])
-    }
-  } else {
-    res.send(frase)
-  }
 })
  
 app.listen(port, () => {

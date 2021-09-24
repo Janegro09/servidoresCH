@@ -65,9 +65,7 @@ class Contenedor {
 
         try {
             let data = fs.readFileSync(this.nombre,'utf-8');
-            console.log(data)
             data = data.split('\n');
-            console.log(data)
             data.pop();
             // console.log("obtuvimos los datos")
             return data;
